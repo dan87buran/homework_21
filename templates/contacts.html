@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты - Магазин</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .contact-info {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 30px;
+        }
+        .map-container {
+            height: 300px;
+            background: #e9ecef;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">MyShop</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="/">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/catalog">Каталог</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/category">Категории</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="/contacts">Контакты</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h1 class="text-center mb-5">Контакты</h1>
+
+        <div class="row">
+            <!-- Контактная информация -->
+            <div class="col-md-6">
+                <div class="contact-info">
+                    <h3>Наши контакты</h3>
+                    <div class="mb-3">
+                        <h5>📞 Телефоны</h5>
+                        <p>+7 (495) 123-45-67<br>+7 (800) 123-45-68</p>
+                    </div>
+                    <div class="mb-3">
+                        <h5>✉️ Email</h5>
+                        <p>info@myshop.ru<br>support@myshop.ru</p>
+                    </div>
+                    <div class="mb-3">
+                        <h5>📍 Адрес</h5>
+                        <p>г. Москва, ул. Примерная, д. 123<br>БЦ "Примерный", 5 этаж</p>
+                    </div>
+                    <div class="mb-3">
+                        <h5>🕒 Часы работы</h5>
+                        <p>Пн-Пт: 9:00 - 20:00<br>Сб-Вс: 10:00 - 18:00</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Форма обратной связи -->
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">Обратная связь</h3>
+                        <form method="POST" action="/contacts">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Ваше имя</label>
+                                <input type="text" class="form-control" id="name" name="name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">Телефон</label>
+                                <input type="tel" class="form-control" id="phone" name="phone">
+                            </div>
+                            <div class="mb-3">
+                                <label for="subject" class="form-label">Тема</label>
+                                <select class="form-select" id="subject" name="subject">
+                                    <option value="general">Общий вопрос</option>
+                                    <option value="order">Вопрос по заказу</option>
+                                    <option value="return">Возврат товара</option>
+                                    <option value="cooperation">Сотрудничество</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Сообщение</label>
+                                <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Отправить сообщение</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Карта -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <h3 class="mb-3">Мы на карте</h3>
+                <div class="map-container">
+                    <p class="text-muted">Здесь будет карта</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Дополнительная информация -->
+        <div class="row mt-5">
+            <div class="col-md-4 text-center">
+                <div class="bg-light rounded p-4">
+                    <h5>🚚 Доставка</h5>
+                    <p class="text-muted">Бесплатная доставка по Москве при заказе от 3000 ₽</p>
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <div class="bg-light rounded p-4">
+                    <h5>🔄 Возврат</h5>
+                    <p class="text-muted">14 дней на возврат товара</p>
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <div class="bg-light rounded p-4">
+                    <h5>💳 Оплата</h5>
+                    <p class="text-muted">Принимаем карты, наличные и онлайн-платежи</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white mt-5 py-4">
+        <div class="container text-center">
+            <p>&copy; 2024 MyShop. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

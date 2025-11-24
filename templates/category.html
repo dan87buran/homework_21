@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Категория - Магазин</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">MyShop</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="/">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/catalog">Каталог</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="/category">Категории</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/contacts">Контакты</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <!-- Хлебные крошки -->
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Главная</a></li>
+                <li class="breadcrumb-item"><a href="/catalog">Каталог</a></li>
+                <li class="breadcrumb-item active">Электроника</li>
+            </ol>
+        </nav>
+
+        <div class="row">
+            <!-- Сайдбар с категориями -->
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-header">
+                        <h5>Категории</h5>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-decoration-none">Смартфоны</a></li>
+                            <li><a href="#" class="text-decoration-none">Ноутбуки</a></li>
+                            <li><a href="#" class="text-decoration-none">Планшеты</a></li>
+                            <li><a href="#" class="text-decoration-none">Аксессуары</a></li>
+                            <li><a href="#" class="text-decoration-none">Аудиотехника</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card mt-3">
+                    <div class="card-header">
+                        <h5>Фильтры</h5>
+                    </div>
+                    <div class="card-body">
+                        <h6>Цена</h6>
+                        <div class="mb-3">
+                            <input type="range" class="form-range" min="0" max="100000" step="1000">
+                        </div>
+                        <h6>Бренд</h6>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="brand1">
+                            <label class="form-check-label" for="brand1">Apple</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="brand2">
+                            <label class="form-check-label" for="brand2">Samsung</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="brand3">
+                            <label class="form-check-label" for="brand3">Xiaomi</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Основной контент -->
+            <div class="col-md-9">
+                <h2>Электроника</h2>
+                <p class="text-muted">Показано 12 товаров</p>
+
+                <div class="row">
+                    <!-- Товары категории -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card">
+                            <img src="https://via.placeholder.com/250x200" class="card-img-top" alt="Товар">
+                            <div class="card-body">
+                                <h5 class="card-title">iPhone 14 Pro</h5>
+                                <p class="card-text">89 990 ₽</p>
+                                <button class="btn btn-primary btn-sm">Подробнее</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card">
+                            <img src="https://via.placeholder.com/250x200" class="card-img-top" alt="Товар">
+                            <div class="card-body">
+                                <h5 class="card-title">Samsung Galaxy S23</h5>
+                                <p class="card-text">64 990 ₽</p>
+                                <button class="btn btn-primary btn-sm">Подробнее</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card">
+                            <img src="https://via.placeholder.com/250x200" class="card-img-top" alt="Товар">
+                            <div class="card-body">
+                                <h5 class="card-title">MacBook Air</h5>
+                                <p class="card-text">119 990 ₽</p>
+                                <button class="btn btn-primary btn-sm">Подробнее</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white mt-5 py-4">
+        <div class="container text-center">
+            <p>&copy; 2024 MyShop. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
